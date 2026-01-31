@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clean Field - Realistic</title>
+    <style>
+      body {
+        margin: 0;
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        background: #f4f6f2;
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="360" height="480" viewBox="0 0 360 480" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grassBase" x1="0" y1="0" x2="0" y2="480" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#8ED27D" />
+          <stop offset="100%" stop-color="#6FB461" />
+        </linearGradient>
+        <pattern id="grassStripes" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(25)">
+          <rect width="18" height="18" fill="none" />
+          <rect width="9" height="18" fill="#86C874" opacity="0.35" />
+        </pattern>
+        <pattern id="dirtSpeck" width="6" height="6" patternUnits="userSpaceOnUse">
+          <circle cx="1" cy="1" r="0.6" fill="#C18C57" opacity="0.6" />
+          <circle cx="4" cy="3" r="0.5" fill="#C18C57" opacity="0.45" />
+        </pattern>
+        <clipPath id="diamondClip">
+          <polygon points="180,144 270,288 180,422 90,288" />
+        </clipPath>
+        <filter id="baseShadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.25" />
+        </filter>
+        <filter id="labelShadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000000" flood-opacity="0.2" />
+        </filter>
+      </defs>
+
+      <rect width="360" height="480" rx="24" fill="url(#grassBase)" />
+      <rect width="360" height="480" rx="24" fill="url(#grassStripes)" opacity="0.35" />
+
+      <circle cx="180" cy="210" r="170" fill="#D6A36A" />
+      <circle cx="180" cy="210" r="170" fill="url(#dirtSpeck)" opacity="0.4" />
+
+      <polygon points="180,144 270,288 180,422 90,288" fill="url(#grassBase)" />
+      <rect width="360" height="480" fill="url(#grassStripes)" opacity="0.25" clip-path="url(#diamondClip)" />
+
+      <circle cx="180" cy="422" r="44" fill="#D6A36A" />
+      <circle cx="180" cy="422" r="44" fill="url(#dirtSpeck)" opacity="0.35" />
+      <circle cx="180" cy="422" r="44" fill="none" stroke="#FFFFFF" stroke-width="4" opacity="0.9" />
+
+      <rect x="166" y="249" width="28" height="6" rx="2" fill="#F6F1E7" />
+
+      <rect x="172" y="136" width="16" height="16" fill="#F6F1E7" filter="url(#baseShadow)" transform="rotate(45 180 144)" />
+      <rect x="262" y="280" width="16" height="16" fill="#F6F1E7" filter="url(#baseShadow)" transform="rotate(45 270 288)" />
+      <rect x="82" y="280" width="16" height="16" fill="#F6F1E7" filter="url(#baseShadow)" transform="rotate(45 90 288)" />
+
+      <polygon points="180,405 194,418 194,438 180,452 166,438 166,418" fill="#F6F1E7" filter="url(#baseShadow)" />
+
+      <text x="180" y="42" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="16" fill="#1E1F21">Team Manager</text>
+
+      <g font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1E1F21" filter="url(#labelShadow)">
+        <rect x="152" y="366" width="56" height="18" rx="9" fill="#F9F6F0" />
+        <text x="180" y="379" text-anchor="middle">C</text>
+
+        <rect x="152" y="240" width="56" height="18" rx="9" fill="#F9F6F0" />
+        <text x="180" y="253" text-anchor="middle">P</text>
+
+        <rect x="248" y="278" width="44" height="18" rx="9" fill="#F9F6F0" />
+        <text x="270" y="291" text-anchor="middle">1B</text>
+
+        <rect x="68" y="278" width="44" height="18" rx="9" fill="#F9F6F0" />
+        <text x="90" y="291" text-anchor="middle">3B</text>
+
+        <rect x="158" y="132" width="44" height="18" rx="9" fill="#F9F6F0" />
+        <text x="180" y="145" text-anchor="middle">2B</text>
+
+        <rect x="122" y="230" width="44" height="18" rx="9" fill="#F9F6F0" />
+        <text x="144" y="243" text-anchor="middle">SS</text>
+
+        <rect x="68" y="172" width="44" height="18" rx="9" fill="#F9F6F0" />
+        <text x="90" y="185" text-anchor="middle">LF</text>
+
+        <rect x="158" y="86" width="44" height="18" rx="9" fill="#F9F6F0" />
+        <text x="180" y="99" text-anchor="middle">CF</text>
+
+        <rect x="248" y="172" width="44" height="18" rx="9" fill="#F9F6F0" />
+        <text x="270" y="185" text-anchor="middle">RF</text>
+
+        <rect x="198" y="182" width="44" height="18" rx="9" fill="#F9F6F0" />
+        <text x="220" y="195" text-anchor="middle">R</text>
+      </g>
+    </svg>
+  </body>
+</html>
