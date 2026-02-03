@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Baseball Field SVG</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #f4f6f2;
+      }
+
+      .field-wrap {
+        width: min(90vw, 520px);
+      }
+
+      svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="field-wrap">
+      <svg
+        width="360"
+        height="480"
+        viewBox="0 0 360 480"
+        preserveAspectRatio="xMidYMid meet"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-label="Baseball field"
+        role="img"
+      >
+        <!-- 1. Outfield + border -->
+        <g id="outfield">
+          <rect width="360" height="480" rx="24" fill="#7fb052" />
+          <path d="M8 254 A172 192 0 0 1 352 254 L180 425 Z" fill="#7fb052" />
+          <path
+            d="M8 254 A172 192 0 0 1 352 254 L180 425 Z"
+            fill="none"
+            stroke="#1f4d2b"
+            stroke-width="7"
+            stroke-linejoin="round"
+          />
+        </g>
+
+        <!-- 2. Infield dirt -->
+        <g id="infield-dirt">
+          <path d="M50 285 A130 130 0 0 1 310 285 L50 285 Z" fill="#f0ad4e" />
+        </g>
+
+        <!-- 3. Base paths -->
+        <g id="base-paths">
+          <path d="M50 285 L180 410 L310 285 Z" fill="#f0ad4e" />
+        </g>
+
+        <!-- 4. Bases + mound + plate -->
+        <g id="bases-mound-plate">
+          <polygon points="180,220 260,300 180,380 100,300" fill="#7fb052" />
+
+          <circle cx="180" cy="300" r="18" fill="#f0ad4e" />
+          <rect x="172" y="296" width="16" height="8" rx="2" fill="#ffffff" />
+
+          <rect x="173" y="213" width="14" height="14" fill="#ffffff" transform="rotate(45 180 220)" />
+          <rect x="253" y="293" width="14" height="14" fill="#ffffff" transform="rotate(45 260 300)" />
+          <rect x="93" y="293" width="14" height="14" fill="#ffffff" transform="rotate(45 100 300)" />
+
+          <circle cx="180" cy="400" r="30" fill="#f0ad4e" />
+          <polygon points="168,390 192,390 192,402 180,417 168,402" fill="#ffffff" />
+        </g>
+
+        <!-- 5. Foul lines -->
+        <g id="foul-lines">
+          <line x1="180" y1="400" x2="24" y2="240" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+          <line x1="180" y1="400" x2="336" y2="240" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+        </g>
+      </svg>
+    </div>
+  </body>
+</html>
